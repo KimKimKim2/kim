@@ -48,7 +48,7 @@ var Ps = new kakao.maps.services.Places();
 
 
 // 주소로 좌표를 검색합니다
-Ps.PlacesSearch('합덕', function(result, status) {
+Ps.keywordSearch('합덕', function(result, status) {
 
     // 정상적으로 검색이 완료됐으면 
      if (status === kakao.maps.services.Status.OK) {
