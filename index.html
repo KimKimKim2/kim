@@ -23,7 +23,7 @@
 		<div>
 			<form onsubmit="searchPlaces(); return false;">
 				키워드 : <input type="text" value="" id="keyword" size="15"> 
-					<form action="i"><button type="submit">검색하기</button></form>
+					<form method="get"><button type="submit">검색하기</button></form>
 			</form>
 		</div>
 </div>
@@ -49,7 +49,7 @@ var geocoder = new kakao.maps.services.Geocoder();
 addressSearch();
 
 // 주소로 좌표를 검색합니다
-geocoder.addressSearch(i, function(result, status) {
+geocoder.addressSearch(keyword, function(result, status) {
 
     // 정상적으로 검색이 완료됐으면 
      if (status === kakao.maps.services.Status.OK) {
