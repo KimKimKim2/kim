@@ -72,8 +72,6 @@ function placesSearchCB(data, status, pagination) {
     if (status === kakao.maps.services.Status.OK) {
 
 
-        // 페이지 번호를 표출합니다
-        displayPagination(pagination);
 
     } else if (status === kakao.maps.services.Status.ZERO_RESULT) {
 
@@ -203,10 +201,6 @@ function displayPagination(pagination) {
         fragment = document.createDocumentFragment(),
         i; 
 
-    // 기존에 추가된 페이지번호를 삭제합니다
-    while (paginationEl.hasChildNodes()) {
-        paginationEl.removeChild (paginationEl.lastChild);
-    }
 
     for (i=1; i<=pagination.last; i++) {
         var el = document.createElement('a');
